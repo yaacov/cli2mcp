@@ -1,0 +1,2206 @@
+{
+  "command": "git",
+  "tools": [
+    {
+      "name": "git_clone",
+      "description": "",
+      "args": [
+        {
+          "name": "-v",
+          "description": "be more verbose",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-q",
+          "description": "be more quiet",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]progress",
+          "description": "force progress reporting",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-n",
+          "description": "don't create a checkout",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--checkout",
+          "description": "opposite of --no-checkout",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]bare",
+          "description": "create a bare repository",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]mirror",
+          "description": "create a mirror repository (implies --bare)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-l",
+          "description": "to clone from a local repository",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--no-hardlinks",
+          "description": "don't use local hardlinks, always copy",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--hardlinks",
+          "description": "opposite of --no-hardlinks",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-s",
+          "description": "setup as shared repository",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]jobs",
+          "description": "number of submodules cloned in parallel",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]dissociate",
+          "description": "use --reference only while cloning",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]depth",
+          "description": "create a shallow clone of that depth",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]single-branch",
+          "description": "clone only one branch, HEAD or --branch",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]tags",
+          "description": "clone tags, and make later fetches not to follow them",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-4",
+          "description": "use IPv4 addresses only",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-6",
+          "description": "use IPv6 addresses only",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]filter",
+          "description": "object filtering",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]sparse",
+          "description": "initialize sparse-checkout file to include only files at root",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_init",
+      "description": "",
+      "args": [
+        {
+          "name": "--[no-]bare",
+          "description": "create a bare repository",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-q",
+          "description": "be quiet",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_add",
+      "description": "",
+      "args": [
+        {
+          "name": "-n",
+          "description": "dry run",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-v",
+          "description": "be verbose",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-p",
+          "description": "select hunks interactively",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-e",
+          "description": "edit current diff and apply",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-f",
+          "description": "allow adding otherwise ignored files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-u",
+          "description": "update tracked files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]renormalize",
+          "description": "renormalize EOL of tracked files (implies -u)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-A",
+          "description": "add changes from all tracked and untracked files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]refresh",
+          "description": "don't add, only refresh the index",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]ignore-errors",
+          "description": "just skip files which cannot be added because of errors",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]sparse",
+          "description": "allow updating entries outside of the sparse-checkout cone",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]chmod",
+          "description": "override the executable bit of the listed files",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_mv",
+      "description": "",
+      "args": [
+        {
+          "name": "-v",
+          "description": "be verbose",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-n",
+          "description": "dry run",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-f",
+          "description": "force move/rename even if target exists",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-k",
+          "description": "skip move/rename errors",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]sparse",
+          "description": "allow updating entries outside of the sparse-checkout cone",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_restore",
+      "description": "",
+      "args": [
+        {
+          "name": "-S",
+          "description": "restore the index",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-W",
+          "description": "restore the working tree (default)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]overlay",
+          "description": "use overlay mode",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-q",
+          "description": "suppress progress reporting",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]progress",
+          "description": "force progress reporting",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-m",
+          "description": "perform a 3-way merge with the new branch",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-2",
+          "description": "checkout our version for unmerged files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-3",
+          "description": "checkout their version for unmerged files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-p",
+          "description": "select hunks interactively",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_rm",
+      "description": "",
+      "args": [
+        {
+          "name": "-n",
+          "description": "dry run",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-q",
+          "description": "do not list removed files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]cached",
+          "description": "only remove from the index",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-f",
+          "description": "override the up-to-date check",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-r",
+          "description": "allow recursive removal",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]sparse",
+          "description": "allow updating entries outside of the sparse-checkout cone",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_bisect",
+      "description": "",
+      "args": []
+    },
+    {
+      "name": "git_diff",
+      "description": "",
+      "args": [
+        {
+          "name": "-p",
+          "description": "generate patch",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-s",
+          "description": "suppress diff output",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-u",
+          "description": "generate patch",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-U",
+          "description": "generate diffs with <n> lines context",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--raw",
+          "description": "generate the diff in raw format",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--patch-with-raw",
+          "description": "synonym for '-p --raw'",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--patch-with-stat",
+          "description": "synonym for '-p --stat'",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--numstat",
+          "description": "machine friendly --stat",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--shortstat",
+          "description": "output only the last line of --stat",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--cumulative",
+          "description": "synonym for --dirstat=cumulative",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--check",
+          "description": "warn if changes introduce conflict markers or whitespace errors",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--summary",
+          "description": "condensed summary such as creations, renames and mode changes",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--name-only",
+          "description": "show only names of changed files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--name-status",
+          "description": "show only names and status of changed files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--stat-width",
+          "description": "generate diffstat with a given width",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--stat-count",
+          "description": "generate diffstat with limited lines",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--binary",
+          "description": "output a binary diff that can be applied",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]full-index",
+          "description": "show full pre- and post-image object names on the \"index\" lines",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-z",
+          "description": "do not munge pathnames and use NULs as output field terminators in --raw or --numstat",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]abbrev[=<n>]",
+          "description": "use <n> digits to display object names",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--no-prefix",
+          "description": "do not show any source or destination prefix",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--default-prefix",
+          "description": "use default prefixes a/ and b/",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--no-renames",
+          "description": "disable rename detection",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]rename-empty",
+          "description": "use empty blobs as rename source",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]follow",
+          "description": "continue listing the history of a file beyond renames",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-l",
+          "description": "prevent rename/copy detection if the number of rename/copy targets exceeds given limit",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--minimal",
+          "description": "produce the smallest possible diff",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--ignore-cr-at-eol",
+          "description": "ignore carrier-return at the end of line",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--ignore-blank-lines",
+          "description": "ignore changes whose lines are all blank",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--patience",
+          "description": "generate diff using the \"patience diff\" algorithm",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--histogram",
+          "description": "generate diff using the \"histogram diff\" algorithm",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--anchored",
+          "description": "generate diff using the \"anchored diff\" algorithm",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--word-diff[=<mode>]",
+          "description": "show word diff, using <mode> to delimit changed words",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-a",
+          "description": "treat all files as text",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-R",
+          "description": "swap two inputs, reverse the diff",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]exit-code",
+          "description": "exit with 1 if there were differences, 0 otherwise",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]quiet",
+          "description": "disable all output of the program",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]ext-diff",
+          "description": "allow an external diff helper to be executed",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]textconv",
+          "description": "run external text conversion filters when comparing binary files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-S",
+          "description": "look for differences that change the number of occurrences of the specified string",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-G",
+          "description": "look for differences that change the number of occurrences of the specified regex",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--pickaxe-all",
+          "description": "show all changes in the changeset with -S or -G",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--pickaxe-regex",
+          "description": "treat <string> in -S as extended POSIX regular expression",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-O",
+          "description": "control the order in which files appear in the output",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--rotate-to",
+          "description": "show the change in the specified path first",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--skip-to",
+          "description": "skip the output to the specified path",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--output",
+          "description": "output to a specific file",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_grep",
+      "description": "",
+      "args": [
+        {
+          "name": "--[no-]cached",
+          "description": "search in index instead of in the work tree",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--no-index",
+          "description": "find in contents not managed by git",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--index",
+          "description": "opposite of --no-index",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]untracked",
+          "description": "search in both tracked and untracked files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-a",
+          "description": "process binary files as text",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-I",
+          "description": "don't match patterns in binary files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]textconv",
+          "description": "process binary files with textconv filters",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-r",
+          "description": "search in subdirectories (default)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--max-depth",
+          "description": "descend at most <n> levels",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]column",
+          "description": "show column number of first match",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-h",
+          "description": "don't show filenames",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-H",
+          "description": "show filenames",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]full-name",
+          "description": "show filenames relative to top directory",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]name-only",
+          "description": "synonym for --files-with-matches",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-z",
+          "description": "print NUL after filenames",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-c",
+          "description": "show the number of matches instead of matching lines",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]break",
+          "description": "print empty line between matches from different files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]heading",
+          "description": "show filename only once above matches from same file",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]threads",
+          "description": "use <n> worker threads",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-NUM",
+          "description": "shortcut for -C NUM",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-f",
+          "description": "read patterns from file",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-e",
+          "description": "match <pattern>",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--and",
+          "description": "combine patterns specified with -e",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-q",
+          "description": "indicate hit with exit status without output",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]all-match",
+          "description": "show only matches from files that match all patterns",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]ext-grep",
+          "description": "allow calling of grep(1) (ignored by this build)",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_log",
+      "description": "",
+      "args": [
+        {
+          "name": "-q",
+          "description": "suppress diff output",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]source",
+          "description": "show source",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]use-mailmap",
+          "description": "use mail map file",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]mailmap",
+          "description": "alias of --use-mailmap",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--clear-decorations",
+          "description": "clear all previously-defined decoration filters",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-L",
+          "description": "trace the evolution of line range <start>,<end> or function :<funcname> in <file>",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_show",
+      "description": "",
+      "args": [
+        {
+          "name": "-q",
+          "description": "suppress diff output",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]source",
+          "description": "show source",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]use-mailmap",
+          "description": "use mail map file",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]mailmap",
+          "description": "alias of --use-mailmap",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--clear-decorations",
+          "description": "clear all previously-defined decoration filters",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-L",
+          "description": "trace the evolution of line range <start>,<end> or function :<funcname> in <file>",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_status",
+      "description": "",
+      "args": [
+        {
+          "name": "-v",
+          "description": "be verbose",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-s",
+          "description": "show status concisely",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-b",
+          "description": "show branch information",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]show-stash",
+          "description": "show stash information",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]ahead-behind",
+          "description": "compute full ahead/behind values",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]long",
+          "description": "show status in long format (default)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-z",
+          "description": "terminate entries with NUL",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--no-renames",
+          "description": "do not detect renames",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--renames",
+          "description": "opposite of --no-renames",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_backfill",
+      "description": "",
+      "args": [
+        {
+          "name": "--min-batch-size",
+          "description": "Minimum number of objects to request at a time",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]sparse",
+          "description": "Restrict the missing objects to the current sparse-checkout",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_branch",
+      "description": "",
+      "args": [
+        {
+          "name": "-v",
+          "description": "show hash and subject, give twice for upstream branch",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-q",
+          "description": "suppress informational messages",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-r",
+          "description": "act on remote-tracking branches",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--contains",
+          "description": "print only branches that contain the commit",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]abbrev[=<n>]",
+          "description": "use <n> digits to display object names",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-a",
+          "description": "list both remote-tracking and local branches",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-d",
+          "description": "delete fully merged branch",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-D",
+          "description": "delete branch (even if not merged)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-m",
+          "description": "move/rename a branch and its reflog",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-M",
+          "description": "move/rename a branch, even if target exists",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]omit-empty",
+          "description": "do not output a newline after empty formatted refs",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-c",
+          "description": "copy a branch and its reflog",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-C",
+          "description": "copy a branch, even if target exists",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-l",
+          "description": "list branch names",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]show-current",
+          "description": "show current branch name",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]create-reflog",
+          "description": "create the branch's reflog",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-f",
+          "description": "force creation, move/rename, deletion",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--merged",
+          "description": "print only branches that are merged",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--no-merged",
+          "description": "print only branches that are not merged",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]sort",
+          "description": "field name to sort on",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_commit",
+      "description": "",
+      "args": [
+        {
+          "name": "-q",
+          "description": "suppress summary after successful commit",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-v",
+          "description": "show diff in commit message template",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]date",
+          "description": "override date for commit",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]reset-author",
+          "description": "the commit is authored by me now (used with -C/-c/--amend)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--trailer",
+          "description": "add custom trailer(s)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-s",
+          "description": "add a Signed-off-by trailer",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-e",
+          "description": "force edit of commit",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]status",
+          "description": "include status in commit message template",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-a",
+          "description": "commit all changed files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-i",
+          "description": "add specified files to index for commit",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]interactive",
+          "description": "interactively add files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-p",
+          "description": "interactively add changes",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-o",
+          "description": "commit only specified files",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-n",
+          "description": "bypass pre-commit and commit-msg hooks",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--verify",
+          "description": "opposite of --no-verify",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]dry-run",
+          "description": "show what would be committed",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]short",
+          "description": "show status concisely",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]branch",
+          "description": "show branch information",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]ahead-behind",
+          "description": "compute full ahead/behind values",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]porcelain",
+          "description": "machine-readable output",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]long",
+          "description": "show status in long format (default)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-z",
+          "description": "terminate entries with NUL",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]amend",
+          "description": "amend previous commit",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--no-post-rewrite",
+          "description": "bypass post-rewrite hook",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--post-rewrite",
+          "description": "opposite of --no-post-rewrite",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_merge",
+      "description": "",
+      "args": [
+        {
+          "name": "-n",
+          "description": "do not show a diffstat at the end of the merge",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]stat",
+          "description": "show a diffstat at the end of the merge",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]summary",
+          "description": "(synonym to --stat)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]log[=<n>]",
+          "description": "add (at most <n>) entries from shortlog to merge commit message",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]squash",
+          "description": "create a single commit instead of doing a merge",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]commit",
+          "description": "perform a commit if the merge succeeds (default)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-e",
+          "description": "edit message before committing",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]ff",
+          "description": "allow fast-forward (default)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--ff-only",
+          "description": "abort if fast-forward is not possible",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--file",
+          "description": "read message from file",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-v",
+          "description": "be more verbose",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-q",
+          "description": "be more quiet",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]abort",
+          "description": "abort the current in-progress merge",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]quit",
+          "description": "--abort but leave index and working tree alone",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]continue",
+          "description": "continue the current in-progress merge",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]progress",
+          "description": "force progress reporting",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]autostash",
+          "description": "automatically stash/stash pop before and after",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]signoff",
+          "description": "add a Signed-off-by trailer",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--no-verify",
+          "description": "bypass pre-merge-commit and commit-msg hooks",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--verify",
+          "description": "opposite of --no-verify",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_rebase",
+      "description": "",
+      "args": [
+        {
+          "name": "--[no-]keep-base",
+          "description": "use the merge-base of upstream and branch as the current base",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--no-verify",
+          "description": "allow pre-rebase hook to run",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--verify",
+          "description": "opposite of --no-verify",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-q",
+          "description": "be quiet. implies --no-stat",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-v",
+          "description": "display a diffstat of what changed upstream",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-n",
+          "description": "do not show diffstat of what changed upstream",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--stat",
+          "description": "opposite of --no-stat",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]signoff",
+          "description": "add a Signed-off-by trailer to each commit",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-C",
+          "description": "passed to 'git apply'",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--no-ff",
+          "description": "cherry-pick all commits, even if unchanged",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--ff",
+          "description": "opposite of --no-ff",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--continue",
+          "description": "continue",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--skip",
+          "description": "skip current patch and continue",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--abort",
+          "description": "abort and check out the original branch",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--quit",
+          "description": "abort but keep HEAD where it is",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--edit-todo",
+          "description": "edit the todo list during an interactive rebase",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--show-current-patch",
+          "description": "show the patch file being applied or merged",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--apply",
+          "description": "use apply strategies to rebase",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-m",
+          "description": "use merging strategies to rebase",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-i",
+          "description": "let the user edit the list of commits to rebase",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]autosquash",
+          "description": "move commits that begin with squash!/fixup! under -i",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]update-refs",
+          "description": "update branches that point to commits that are being rebased",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]autostash",
+          "description": "automatically stash/stash pop before and after",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]fork-point",
+          "description": "use 'merge-base --fork-point' to refine upstream",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]root",
+          "description": "rebase all reachable commits up to the root(s)",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_reset",
+      "description": "",
+      "args": [
+        {
+          "name": "-q",
+          "description": "be quiet, only report errors",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--no-refresh",
+          "description": "skip refreshing the index after reset",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--refresh",
+          "description": "opposite of --no-refresh",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--mixed",
+          "description": "reset HEAD and index",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--soft",
+          "description": "reset only HEAD",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--hard",
+          "description": "reset HEAD, index and working tree",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--merge",
+          "description": "reset HEAD, index and working tree",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--keep",
+          "description": "reset HEAD but keep local changes",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-p",
+          "description": "select hunks interactively",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_switch",
+      "description": "",
+      "args": [
+        {
+          "name": "--[no-]guess",
+          "description": "second guess 'git switch <no-such-branch>'",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-q",
+          "description": "suppress progress reporting",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]progress",
+          "description": "force progress reporting",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-m",
+          "description": "perform a 3-way merge with the new branch",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-d",
+          "description": "detach HEAD at named commit",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-f",
+          "description": "force checkout (throw away local modifications)",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_tag",
+      "description": "",
+      "args": [
+        {
+          "name": "-l",
+          "description": "list tag names",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-n[<n>]",
+          "description": "print <n> lines of each tag message",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-d",
+          "description": "delete tags",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-v",
+          "description": "verify tags",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-a",
+          "description": "annotated tag, needs a message",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--trailer",
+          "description": "add custom trailer(s)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-e",
+          "description": "force edit of tag message",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-s",
+          "description": "annotated and GPG-signed tag",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-f",
+          "description": "replace the tag if exists",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]create-reflog",
+          "description": "create a reflog",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--contains",
+          "description": "print only tags that contain the commit",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--merged",
+          "description": "print only tags that are merged",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--no-merged",
+          "description": "print only tags that are not merged",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]omit-empty",
+          "description": "do not output a newline after empty formatted refs",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]sort",
+          "description": "field name to sort on",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_fetch",
+      "description": "",
+      "args": [
+        {
+          "name": "-v",
+          "description": "be more verbose",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-q",
+          "description": "be more quiet",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]all",
+          "description": "fetch from all remotes",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]set-upstream",
+          "description": "set upstream for git pull/fetch",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-a",
+          "description": "append to .git/FETCH_HEAD instead of overwriting",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]atomic",
+          "description": "use atomic transaction to update references",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-f",
+          "description": "force overwrite of local reference",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-m",
+          "description": "fetch from multiple remotes",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-t",
+          "description": "fetch all tags and associated objects",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-n",
+          "description": "do not fetch all tags (--no-tags)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]jobs",
+          "description": "number of submodules fetched in parallel",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]prefetch",
+          "description": "modify the refspec to place all refs within refs/prefetch/",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-p",
+          "description": "prune remote-tracking branches no longer on remote",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]dry-run",
+          "description": "dry run",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]porcelain",
+          "description": "machine-readable output",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-k",
+          "description": "keep downloaded pack",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]progress",
+          "description": "force progress reporting",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]depth",
+          "description": "deepen history of shallow clone",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]deepen",
+          "description": "deepen history of shallow clone",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--unshallow",
+          "description": "convert to a complete repository",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--refetch",
+          "description": "re-fetch without negotiating common commits",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--refmap",
+          "description": "specify fetch refmap",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-4",
+          "description": "use IPv4 addresses only",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-6",
+          "description": "use IPv6 addresses only",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]filter",
+          "description": "object filtering",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]auto-gc",
+          "description": "run 'maintenance --auto' after fetching",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]stdin",
+          "description": "accept refspecs from stdin",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_pull",
+      "description": "",
+      "args": [
+        {
+          "name": "-v",
+          "description": "be more verbose",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-q",
+          "description": "be more quiet",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]progress",
+          "description": "force progress reporting",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-n",
+          "description": "do not show a diffstat at the end of the merge",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]stat",
+          "description": "show a diffstat at the end of the merge",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]log[=<n>]",
+          "description": "add (at most <n>) entries from shortlog to merge commit message",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]signoff[=...]",
+          "description": "add a Signed-off-by trailer",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]squash",
+          "description": "create a single commit instead of doing a merge",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]commit",
+          "description": "perform a commit if the merge succeeds (default)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]edit",
+          "description": "edit message before committing",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]ff",
+          "description": "allow fast-forward",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--ff-only",
+          "description": "abort if fast-forward is not possible",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]verify",
+          "description": "control use of pre-merge-commit and commit-msg hooks",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]autostash",
+          "description": "automatically stash/stash pop before and after",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]all",
+          "description": "fetch from all remotes",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-a",
+          "description": "append to .git/FETCH_HEAD instead of overwriting",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-f",
+          "description": "force overwrite of local branch",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-t",
+          "description": "fetch all tags and associated objects",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-p",
+          "description": "prune remote-tracking branches no longer on remote",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]dry-run",
+          "description": "dry run",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-k",
+          "description": "keep downloaded pack",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]depth",
+          "description": "deepen history of shallow clone",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]deepen",
+          "description": "deepen history of shallow clone",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--unshallow",
+          "description": "convert to a complete repository",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--refmap",
+          "description": "specify fetch refmap",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-4",
+          "description": "use IPv4 addresses only",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-6",
+          "description": "use IPv6 addresses only",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]set-upstream",
+          "description": "set upstream for git pull/fetch",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "git_push",
+      "description": "",
+      "args": [
+        {
+          "name": "-v",
+          "description": "be more verbose",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-q",
+          "description": "be more quiet",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]all",
+          "description": "push all branches",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]branches",
+          "description": "alias of --all",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]mirror",
+          "description": "mirror all refs",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-d",
+          "description": "delete refs",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]tags",
+          "description": "push tags (can't be used with --all or --branches or --mirror)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-n",
+          "description": "dry run",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]porcelain",
+          "description": "machine-readable output",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-f",
+          "description": "force updates",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]thin",
+          "description": "use thin pack",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]progress",
+          "description": "force progress reporting",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]prune",
+          "description": "prune locally removed refs",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--no-verify",
+          "description": "bypass pre-push hook",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--verify",
+          "description": "opposite of --no-verify",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]follow-tags",
+          "description": "push missing but relevant tags",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "--[no-]atomic",
+          "description": "request atomic transaction on remote side",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-4",
+          "description": "use IPv4 addresses only",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "-6",
+          "description": "use IPv6 addresses only",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
