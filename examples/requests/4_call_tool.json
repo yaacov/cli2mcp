@@ -5,7 +5,7 @@
   "params": {
     "name": "curl",
     "arguments": {
-      "url": "http://example.com"
+      "url": "http://127.0.0.1:9000"
     }
   }
 }

@@ -3,7 +3,7 @@
   "tools": [
     {
       "name": "git_clone",
-      "description": "",
+      "description": "git clone command",
       "args": [
         {
           "name": "-v",
@@ -124,12 +124,30 @@
           "description": "initialize sparse-checkout file to include only files at root",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "options",
+          "description": "options",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "repo",
+          "description": "repo",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "dir",
+          "description": "dir",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_init",
-      "description": "",
+      "description": "git init command",
       "args": [
         {
           "name": "--[no-]bare",
@@ -142,12 +160,18 @@
           "description": "be quiet",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "template-directory",
+          "description": "template-directory",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_add",
-      "description": "",
+      "description": "git add command",
       "args": [
         {
           "name": "-n",
@@ -220,12 +244,24 @@
           "description": "override the executable bit of the listed files",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "options",
+          "description": "options",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "pathspec",
+          "description": "pathspec",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_mv",
-      "description": "",
+      "description": "git mv command",
       "args": [
         {
           "name": "-v",
@@ -256,12 +292,24 @@
           "description": "allow updating entries outside of the sparse-checkout cone",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "source",
+          "description": "source",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "destination",
+          "description": "destination",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_restore",
-      "description": "",
+      "description": "git restore command",
       "args": [
         {
           "name": "-S",
@@ -316,12 +364,30 @@
           "description": "select hunks interactively",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "options",
+          "description": "options",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "branch",
+          "description": "branch",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "file",
+          "description": "file",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_rm",
-      "description": "",
+      "description": "git rm command",
       "args": [
         {
           "name": "-n",
@@ -363,300 +429,157 @@
     },
     {
       "name": "git_bisect",
-      "description": "",
-      "args": []
+      "description": "git bisect start command",
+      "args": [
+        {
+          "name": "term",
+          "description": "term",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "bad",
+          "description": "bad",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "good",
+          "description": "good",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "pathspec",
+          "description": "pathspec",
+          "type": "string",
+          "required": true
+        }
+      ]
     },
     {
       "name": "git_diff",
-      "description": "",
+      "description": "git diff command",
       "args": [
         {
-          "name": "-p",
-          "description": "generate patch",
+          "name": "-z",
+          "description": "output diff-raw with lines terminated with NUL.",
           "type": "string",
           "required": false
         },
         {
-          "name": "-s",
-          "description": "suppress diff output",
+          "name": "-p",
+          "description": "output patch format.",
           "type": "string",
           "required": false
         },
         {
           "name": "-u",
-          "description": "generate patch",
+          "description": "synonym for -p.",
           "type": "string",
           "required": false
         },
         {
-          "name": "-U",
-          "description": "generate diffs with <n> lines context",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--raw",
-          "description": "generate the diff in raw format",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--patch-with-raw",
-          "description": "synonym for '-p --raw'",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--patch-with-stat",
-          "description": "synonym for '-p --stat'",
+          "name": "--stat",
+          "description": "show diffstat instead of patch.",
           "type": "string",
           "required": false
         },
         {
           "name": "--numstat",
-          "description": "machine friendly --stat",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--shortstat",
-          "description": "output only the last line of --stat",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--cumulative",
-          "description": "synonym for --dirstat=cumulative",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--check",
-          "description": "warn if changes introduce conflict markers or whitespace errors",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--summary",
-          "description": "condensed summary such as creations, renames and mode changes",
+          "description": "show numeric diffstat instead of patch.",
           "type": "string",
           "required": false
         },
         {
           "name": "--name-only",
-          "description": "show only names of changed files",
+          "description": "show only names of changed files.",
           "type": "string",
           "required": false
         },
         {
-          "name": "--name-status",
-          "description": "show only names and status of changed files",
+          "name": "--full-index",
+          "description": "show full object name on index lines.",
           "type": "string",
           "required": false
         },
         {
-          "name": "--stat-width",
-          "description": "generate diffstat with a given width",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--stat-count",
-          "description": "generate diffstat with limited lines",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--binary",
-          "description": "output a binary diff that can be applied",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--[no-]full-index",
-          "description": "show full pre- and post-image object names on the \"index\" lines",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "-z",
-          "description": "do not munge pathnames and use NULs as output field terminators in --raw or --numstat",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--[no-]abbrev[=<n>]",
-          "description": "use <n> digits to display object names",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--no-prefix",
-          "description": "do not show any source or destination prefix",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--default-prefix",
-          "description": "use default prefixes a/ and b/",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--no-renames",
-          "description": "disable rename detection",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--[no-]rename-empty",
-          "description": "use empty blobs as rename source",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--[no-]follow",
-          "description": "continue listing the history of a file beyond renames",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "-l",
-          "description": "prevent rename/copy detection if the number of rename/copy targets exceeds given limit",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--minimal",
-          "description": "produce the smallest possible diff",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--ignore-cr-at-eol",
-          "description": "ignore carrier-return at the end of line",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--ignore-blank-lines",
-          "description": "ignore changes whose lines are all blank",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--patience",
-          "description": "generate diff using the \"patience diff\" algorithm",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--histogram",
-          "description": "generate diff using the \"histogram diff\" algorithm",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--anchored",
-          "description": "generate diff using the \"anchored diff\" algorithm",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--word-diff[=<mode>]",
-          "description": "show word diff, using <mode> to delimit changed words",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "-a",
-          "description": "treat all files as text",
+          "name": "--abbrev=<n>",
+          "description": "abbreviate object names in diff-tree header and diff-raw.",
           "type": "string",
           "required": false
         },
         {
           "name": "-R",
-          "description": "swap two inputs, reverse the diff",
+          "description": "swap input file pairs.",
           "type": "string",
           "required": false
         },
         {
-          "name": "--[no-]exit-code",
-          "description": "exit with 1 if there were differences, 0 otherwise",
+          "name": "-B",
+          "description": "detect complete rewrites.",
           "type": "string",
           "required": false
         },
         {
-          "name": "--[no-]quiet",
-          "description": "disable all output of the program",
+          "name": "-M",
+          "description": "detect renames.",
           "type": "string",
           "required": false
         },
         {
-          "name": "--[no-]ext-diff",
-          "description": "allow an external diff helper to be executed",
+          "name": "-C",
+          "description": "detect copies.",
           "type": "string",
           "required": false
         },
         {
-          "name": "--[no-]textconv",
-          "description": "run external text conversion filters when comparing binary files",
+          "name": "-l<n>",
+          "description": "limit rename attempts up to <n> paths.",
           "type": "string",
           "required": false
         },
         {
-          "name": "-S",
-          "description": "look for differences that change the number of occurrences of the specified string",
+          "name": "-O<file>",
+          "description": "reorder diffs according to the <file>.",
           "type": "string",
           "required": false
         },
         {
-          "name": "-G",
-          "description": "look for differences that change the number of occurrences of the specified regex",
+          "name": "-S<string>",
+          "description": "find filepair whose only one side contains the string.",
           "type": "string",
           "required": false
         },
         {
-          "name": "--pickaxe-all",
-          "description": "show all changes in the changeset with -S or -G",
+          "name": "-a",
+          "description": "treat all files as text.",
           "type": "string",
           "required": false
         },
         {
-          "name": "--pickaxe-regex",
-          "description": "treat <string> in -S as extended POSIX regular expression",
+          "name": "options",
+          "description": "options",
           "type": "string",
-          "required": false
+          "required": true
         },
         {
-          "name": "-O",
-          "description": "control the order in which files appear in the output",
+          "name": "commit",
+          "description": "commit",
           "type": "string",
-          "required": false
+          "required": true
         },
         {
-          "name": "--rotate-to",
-          "description": "show the change in the specified path first",
+          "name": "path",
+          "description": "path",
           "type": "string",
-          "required": false
-        },
-        {
-          "name": "--skip-to",
-          "description": "skip the output to the specified path",
-          "type": "string",
-          "required": false
-        },
-        {
-          "name": "--output",
-          "description": "output to a specific file",
-          "type": "string",
-          "required": false
+          "required": true
         }
       ]
     },
     {
       "name": "git_grep",
-      "description": "",
+      "description": "git grep command",
       "args": [
         {
           "name": "--[no-]cached",
@@ -813,12 +736,36 @@
           "description": "allow calling of grep(1) (ignored by this build)",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "options",
+          "description": "options",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "pattern",
+          "description": "pattern",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "rev",
+          "description": "rev",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "path",
+          "description": "path",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_log",
-      "description": "",
+      "description": "git log command",
       "args": [
         {
           "name": "-q",
@@ -855,12 +802,30 @@
           "description": "trace the evolution of line range <start>,<end> or function :<funcname> in <file>",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "options",
+          "description": "options",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "revision-range",
+          "description": "revision-range",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "path",
+          "description": "path",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_show",
-      "description": "",
+      "description": "git log command",
       "args": [
         {
           "name": "-q",
@@ -897,12 +862,30 @@
           "description": "trace the evolution of line range <start>,<end> or function :<funcname> in <file>",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "options",
+          "description": "options",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "revision-range",
+          "description": "revision-range",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "path",
+          "description": "path",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_status",
-      "description": "",
+      "description": "git status command",
       "args": [
         {
           "name": "-v",
@@ -957,12 +940,24 @@
           "description": "opposite of --no-renames",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "options",
+          "description": "options",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "pathspec",
+          "description": "pathspec",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_backfill",
-      "description": "",
+      "description": "git backfill command",
       "args": [
         {
           "name": "--min-batch-size",
@@ -975,12 +970,18 @@
           "description": "Restrict the missing objects to the current sparse-checkout",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "n",
+          "description": "n",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_branch",
-      "description": "",
+      "description": "git branch command",
       "args": [
         {
           "name": "-v",
@@ -1101,12 +1102,18 @@
           "description": "field name to sort on",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "options",
+          "description": "options",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_commit",
-      "description": "",
+      "description": "git commit command",
       "args": [
         {
           "name": "-q",
@@ -1257,12 +1264,18 @@
           "description": "opposite of --no-post-rewrite",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "mode",
+          "description": "mode",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_merge",
-      "description": "",
+      "description": "git merge command",
       "args": [
         {
           "name": "-n",
@@ -1383,12 +1396,24 @@
           "description": "opposite of --no-verify",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "options",
+          "description": "options",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "commit",
+          "description": "commit",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_rebase",
-      "description": "",
+      "description": "git rebase command",
       "args": [
         {
           "name": "--[no-]keep-base",
@@ -1539,12 +1564,36 @@
           "description": "rebase all reachable commits up to the root(s)",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "cmd",
+          "description": "cmd",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "newbase",
+          "description": "newbase",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "upstream",
+          "description": "upstream",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "branch",
+          "description": "branch",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_reset",
-      "description": "",
+      "description": "git reset command",
       "args": [
         {
           "name": "-q",
@@ -1599,12 +1648,18 @@
           "description": "select hunks interactively",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "commit",
+          "description": "commit",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_switch",
-      "description": "",
+      "description": "git switch command",
       "args": [
         {
           "name": "--[no-]guess",
@@ -1641,12 +1696,24 @@
           "description": "force checkout (throw away local modifications)",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "options",
+          "description": "options",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "branch",
+          "description": "branch",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_tag",
-      "description": "",
+      "description": "git tag command",
       "args": [
         {
           "name": "-l",
@@ -1737,12 +1804,30 @@
           "description": "field name to sort on",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "key-id",
+          "description": "key-id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "msg",
+          "description": "msg",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "file",
+          "description": "file",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_fetch",
-      "description": "",
+      "description": "git fetch command",
       "args": [
         {
           "name": "-v",
@@ -1905,12 +1990,30 @@
           "description": "accept refspecs from stdin",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "options",
+          "description": "options",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "repository",
+          "description": "repository",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "refspec",
+          "description": "refspec",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_pull",
-      "description": "",
+      "description": "git pull command",
       "args": [
         {
           "name": "-v",
@@ -2079,12 +2182,30 @@
           "description": "set upstream for git pull/fetch",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "options",
+          "description": "options",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "repository",
+          "description": "repository",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "refspec",
+          "description": "refspec",
+          "type": "string",
+          "required": true
         }
       ]
     },
     {
       "name": "git_push",
-      "description": "",
+      "description": "git push command",
       "args": [
         {
           "name": "-v",
@@ -2199,6 +2320,24 @@
           "description": "use IPv6 addresses only",
           "type": "string",
           "required": false
+        },
+        {
+          "name": "options",
+          "description": "options",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "repository",
+          "description": "repository",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "refspec",
+          "description": "refspec",
+          "type": "string",
+          "required": true
         }
       ]
     }

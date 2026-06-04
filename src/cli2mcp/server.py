@@ -96,9 +96,11 @@ def _make_handler(base_command, tool):
     """
     tool_args = tool["args"]
 
-    # Build the parameter list from the JSON args.
+    # Sort so required params come first (Python requires this).
+    sorted_args = sorted(tool_args, key=lambda a: not a.get("required"))
+
     params = []
-    for arg_def in tool_args:
+    for arg_def in sorted_args:
         key = _to_param_name(arg_def["name"])
         if arg_def.get("required"):
             # Required args have no default value.

@@ -3,7 +3,7 @@
   "tools": [
     {
       "name": "curl",
-      "description": "",
+      "description": "curl command",
       "args": [
         {
           "name": "--data",
