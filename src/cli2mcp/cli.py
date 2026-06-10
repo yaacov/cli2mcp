@@ -62,7 +62,31 @@ def main():
         save(tools, output)
 
     elif args.action == "serve":
+        import json
+        import signal
         from cli2mcp.server import create_server
+
+        with open(args.tools_file) as f:
+            data = json.load(f)
+
+        tool_count = len(data.get("tools", []))
+        command = data.get("command", "unknown")
+
+        print(f"cli2mcp server starting")
+        print(f"  Command:   {command}")
+        print(f"  Tools:     {tool_count}")
+        print(f"  File:      {args.tools_file}")
+        print(f"  Transport: {args.transport}")
+        print()
+        print("Press Ctrl+C to stop the server.")
+        sys.stdout.flush()
+
+        def _shutdown(signum, frame):
+            print("\nShutting down.")
+            sys.exit(0)
+
+        signal.signal(signal.SIGINT, _shutdown)
+        signal.signal(signal.SIGTERM, _shutdown)
 
         server = create_server(args.tools_file)
         server.run(transport=args.transport)

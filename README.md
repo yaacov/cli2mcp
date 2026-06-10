@@ -39,6 +39,12 @@ uv run cli2mcp serve curl.tools.json
 This starts an MCP server (stdio transport) that exposes every entry in
 the JSON file as a callable tool.
 
+To use HTTP transport instead:
+
+```bash
+uv run cli2mcp serve curl.tools.json -t streamable-http
+```
+
 ### 3. Connect to an AI assistant
 
 Add the server to your assistant's MCP configuration.
